@@ -16,6 +16,7 @@
             <MenuItem Header="{x:Static ProjRes:Resources.IDS_Example_String}" />
             <MenuItem Header="{Binding StringFormat={x:Static ProjRes:Resources.IDS_Example_String}, Source={x:Static local:ProductVersion.ProductName}, Mode=OneWay}" />
             <MenuItem Header="{x:Static ProjRes:Resources.IDS_Example_String}" HeaderStringFormat="{x:Static local:ProductVersion.ProductName}" />
+            <MenuItem Header="{x:Static local:ProductVersion.ProductName}" HeaderStringFormat="{x:Static ProjRes:Resources.IDS_Example_String}" />
             <MenuItem>
                <MenuItem.Header>
                   <AccessText Text="{Binding StringFormat={x:Static ProjRes:Resources.IDS_Example_String}, Source={x:Static local:ProductVersion.ProductName}, Mode=OneWay}" />

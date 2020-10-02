@@ -61,7 +61,7 @@ namespace Test_MenuItem.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This has a {0} Placeholder.
+        ///   Looks up a localized string similar to This has a _{0} Placeholder.
         /// </summary>
         public static string IDS_Example_String {
             get {

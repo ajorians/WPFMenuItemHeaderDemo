@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="IDS_Example_String" xml:space="preserve">
-    <value>This has a {0} Placeholder</value>
+    <value>This has a _{0} Placeholder</value>
   </data>
 </root>
