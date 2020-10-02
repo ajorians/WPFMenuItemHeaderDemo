@@ -1,0 +1,28 @@
+﻿<Window x:Class="Test_MenuItem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_MenuItem"
+        xmlns:ProjRes="clr-namespace:Test_MenuItem.Properties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+   
+    <Grid>
+      <Menu Height="16"
+            VerticalAlignment="Top">
+         <MenuItem Header="File">
+            <MenuItem Header="_Normal String" />
+            <MenuItem Header="{x:Static ProjRes:Resources.IDS_Example_String}" />
+            <MenuItem Header="{Binding StringFormat={x:Static ProjRes:Resources.IDS_Example_String}, Source={x:Static local:ProductVersion.ProductName}, Mode=OneWay}" />
+            <MenuItem Header="{x:Static ProjRes:Resources.IDS_Example_String}" HeaderStringFormat="{x:Static local:ProductVersion.ProductName}" />
+            <MenuItem>
+               <MenuItem.Header>
+                  <AccessText Text="{Binding StringFormat={x:Static ProjRes:Resources.IDS_Example_String}, Source={x:Static local:ProductVersion.ProductName}, Mode=OneWay}" />
+               </MenuItem.Header>
+            </MenuItem>
+         </MenuItem>
+
+      </Menu>
+   </Grid>
+</Window>
