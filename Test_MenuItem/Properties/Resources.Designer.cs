@@ -68,5 +68,14 @@ namespace Test_MenuItem.Properties {
                 return ResourceManager.GetString("IDS_Example_String", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This has {0} placeholder and another {1} for it&apos;s text.
+        /// </summary>
+        public static string IDS_String_Two_Placeholders {
+            get {
+                return ResourceManager.GetString("IDS_String_Two_Placeholders", resourceCulture);
+            }
+        }
     }
 }

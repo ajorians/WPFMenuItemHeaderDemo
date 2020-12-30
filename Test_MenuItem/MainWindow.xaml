@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test_MenuItem"
         xmlns:ProjRes="clr-namespace:Test_MenuItem.Properties"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-   
-    <Grid>
+
+   <Grid>
+      <Grid.Resources>
+         <System:Double x:Key="Double_SomeNumber">47</System:Double>
+      </Grid.Resources>
+      <Grid.RowDefinitions>
+         <RowDefinition Height="16" />
+         <RowDefinition Height="20" />
+         <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
       <Menu Height="16"
             VerticalAlignment="Top">
          <MenuItem Header="File">
@@ -23,7 +32,11 @@
                </MenuItem.Header>
             </MenuItem>
          </MenuItem>
-
       </Menu>
+      <Button Grid.Row="1"
+              Width="550"
+              Content="{x:Static local:ProductVersion.ProductName}"
+              ContentStringFormat="{local:PlaceholderReplacementExtension InputString={x:Static ProjRes:Resources.IDS_String_Two_Placeholders}, PlaceholderValue={x:Static local:ProductVersion.ProductName}, PlaceholderIndex=1 }"
+              ToolTip="{local:TooltipExtension {local:PlaceholderReplacementExtension InputString={x:Static ProjRes:Resources.IDS_String_Two_Placeholders}, PlaceholderValue={x:Static local:ProductVersion.ProductName}, PlaceholderIndex=1 }, {x:Static local:ProductVersion.ProductName} }" />
    </Grid>
 </Window>

@@ -120,4 +120,7 @@
   <data name="IDS_Example_String" xml:space="preserve">
     <value>This has a _{0} Placeholder</value>
   </data>
+  <data name="IDS_String_Two_Placeholders" xml:space="preserve">
+    <value>This has {0} placeholder and another {1} for it's text</value>
+  </data>
 </root>
